@@ -1,0 +1,47 @@
+{
+    "training": {
+        "model_name": "fpn-vgg16",
+        "input_images": "",
+        "target_images": "",
+        "image_size": {
+            "height": 600,
+            "width": 800
+        },
+
+        "architecture": "fpn",
+        "backbone": "vgg16",
+        "freeze_encoder": true,
+        "input_shape": {
+            "height": 288,
+            "width": 800,
+            "channels": 3
+        },
+
+        "train_val_ratio": 0.1,
+        "batch_size": 16,
+        "learning_rate": 0.00001,
+        "epochs": 10,
+
+        "num_classes": 3,
+
+        "workers": 10,
+        "multiprocessing": false
+    },
+    "evaluation": {
+        "model_name": "",
+        "input_images": "",
+        "target_images": "",
+        "input_shape": {
+            "height": 288,
+            "width": 800,
+            "channels": 3
+        },
+        "batch_size": 16
+    },
+    "common": {
+        "carla_encoding": {
+            "(7, 0, 0)": [0, 1, 0],
+            "(6, 0, 0)": [0, 0, 1]
+        }
+    }
+}
